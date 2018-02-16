@@ -11,9 +11,11 @@ arduinoData = serial.Serial('com12', 9600)
 plt.ion()
 pygame.mixer.init()
 
-def makeFig():	
+def makeFig():
+	plt.style.use('ggplot')
 	plt.plot(tempC, 'ro-', label='Centigrados')
 	plt.legend(loc='upper left')
+	plt.rc('lines', linewidth=3, color='g')
 	
 
 
